@@ -1,35 +1,135 @@
-html{
+html {
     scroll-behavior: smooth;
 }
+
 body {
-    background-color: #dedede;
-    padding: 5px;
-    margin: 15px;
-    font-size: 25px;
-    font-family:Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #111111;
+    padding: 10px;
+    margin: 10px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
 }
 
 h1 {
     text-align: center;
-    font-family:Arial, sans-serif;
-    font-size: 1.95em;
+    font-family: Arial, sans-serif;
+    font-size: 2em;
+    margin: 20px 0;
 }
 
-h2{
-    text-align:center;
-  }
-
-li{
-    margin-top: 20px;
-}
-
-img{
-    border: 5px solid blue;
-    border-radius: 35px;
-    width: 100%;
-  }
-
-.label{
+h2 {
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p {
+    line-height: 1.5;
+    margin: 15px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 20px auto;
+    width: 95%;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border: 5px solid #000066;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+figcaption {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.label {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    margin-top: 25px;
+    text-align: center;
+}
+
+footer a {
+    color: #003366;
+    font-weight: bold;
+}
+
+/* Media query 1 */
+@media screen and (min-width: 481px) {
+    body {
+        font-size: 19px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Media query 2 */
+@media screen and (min-width: 641px) {
+    h1 {
+        font-size: 2.4em;
+    }
+
+    .grid {
+        gap: 25px;
+    }
+
+    img {
+        max-width: 450px;
+    }
+}
+
+/* Media query 3 */
+@media screen and (min-width: 961px) {
+    body {
+        font-size: 20px;
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        width: 90%;
+        gap: 30px;
+    }
+}
+
+/* Media query 4 */
+@media screen and (min-width: 1281px) {
+    body {
+        font-size: 21px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        width: 85%;
+        gap: 35px;
+    }
+
+    img {
+        max-width: 400px;
+    }
+}
+
+/* Accessibility: respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }
